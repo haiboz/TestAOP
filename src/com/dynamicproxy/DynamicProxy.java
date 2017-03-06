@@ -18,7 +18,7 @@ public class DynamicProxy implements InvocationHandler{
 	
 	/**
 	 * 写法固定，AOP专用：绑定委托对象，并返回一个代理类
-	 * @param taeget
+	 * @param target
 	 * @return
 	 */
 	public Object bind(Object target){
@@ -26,11 +26,11 @@ public class DynamicProxy implements InvocationHandler{
 		return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
 	}
 	/**
-	 * @param Object
+	 * @param proxy
 	 * 		target:被代理的对象
-	 * @param Method
+	 * @param method
 	 * 		method:要调用的方法
-	 * @param Object
+	 * @param args
 	 * 		args:放法调用时要传的参数
 	 * 		
 	 */
