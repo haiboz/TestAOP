@@ -8,7 +8,7 @@ public class SingletonTest1 {
     //定义一个私有的构造方法
     private SingletonTest1(){}
     private static final SingletonTest1 singleton = new SingletonTest1();
-    public SingletonTest1 getInstance(){
+    public static SingletonTest1 getInstance(){
         return singleton;
     }
 }
